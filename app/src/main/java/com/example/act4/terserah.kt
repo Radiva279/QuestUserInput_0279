@@ -100,3 +100,29 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
             ),
             color = Color.DarkGray
         )
+
+        Button(
+            modifier = Modifier.fillMaxWidth(),
+            enabled = textNama.isNotBlank() &&
+                    textAlamat.isNotBlank() &&
+                    textJK.isNotBlank(),
+            onClick = {
+                nama = textNama
+                jenis = textJK
+                alamat = textAlamat
+            }
+        ) {
+            Text(text = stringResource(id = R.string.submit))
+        }
+
+        HorizontalDivider(
+            modifier = Modifier.padding(
+                vertical = dimensionResource(
+                    id = R.dimen.padding_medium
+                )
+            ),
+            thickness = dimensionResource(
+                id = R.dimen.divider_tipis
+            ),
+            color = Color.DarkGray
+        )
