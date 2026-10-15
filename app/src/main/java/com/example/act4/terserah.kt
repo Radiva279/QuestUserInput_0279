@@ -32,3 +32,12 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun FormDataDiri(modifier: Modifier = Modifier) {
 
+    // Menyimpan input dari keyboard
+    var textNama by remember { mutableStateOf("") }
+    var textAlamat by remember { mutableStateOf("") }
+    var textJK by remember { mutableStateOf("") }
+
+    val gender = listOf("Laki-laki", "Perempuan")
+
+
+
