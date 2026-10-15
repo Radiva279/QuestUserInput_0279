@@ -81,3 +81,22 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
             }
         }
 
+        OutlinedTextField(
+            value = textAlamat,
+            onValueChange = { textAlamat = it },
+            singleLine = true,
+            modifier = Modifier.width(250.dp),
+            label = { Text("Alamat") }
+        )
+
+        HorizontalDivider(
+            modifier = Modifier.padding(
+                vertical = dimensionResource(
+                    id = R.dimen.padding_medium
+                )
+            ),
+            thickness = dimensionResource(
+                id = R.dimen.divider_tipis
+            ),
+            color = Color.DarkGray
+        )
